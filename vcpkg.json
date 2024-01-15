@@ -11,11 +11,19 @@
     "xbyak",
     "rsm-binary-io"
   ],
-  "builtin-baseline": "57d3194e702a2959e86a6748999ad71fc24f7922",
+  "builtin-baseline": "53bef8994c541b6561884a8395ea35715ece75db",
   "overrides": [
     {
       "name": "tbb",
       "version": "2021.11.0"
+    },
+    {
+      "name": "tomlplusplus",
+      "version": "3.1.0"
+    },
+    {
+      "name": "xbyak",
+      "version": "6.60"
     }
   ]
 }

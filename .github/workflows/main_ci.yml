@@ -36,6 +36,7 @@ jobs:
         run: |
           mkdir -p ${{ env.VCPKG_DEFAULT_BINARY_CACHE }}
           cd $env:VCPKG_INSTALLATION_ROOT
+          git pull
           ./bootstrap-vcpkg.bat
           ./vcpkg --version > ${{ github.workspace }}/vcpkg-version.txt
 
