@@ -49,10 +49,13 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/vcpkg.json', 'vcpkg-version.txt') }}
 
       - name: Configure CMake
-        run: cmake --preset vs2022-windows-vcpkg -DCOPY_BUILD=OFF
+        run: |
+          $env:VCPKG_ROOT = $env:VCPKG_INSTALLATION_ROOT
+          cmake --preset vs2022-windows-vcpkg -DCOPY_BUILD=OFF
 
       - name: Build
         run: |
+          $env:VCPKG_ROOT = $env:VCPKG_INSTALLATION_ROOT 
           cmake --build build --config ${{ env.BUILD_TYPE }}
           cmake --build build --target archive --config ${{ env.BUILD_TYPE }}
 
