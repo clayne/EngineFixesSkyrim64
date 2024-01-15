@@ -36,8 +36,6 @@ add_compile_definitions(
     UNICODE
 )
 
-add_subdirectory(external/CommonLibSSE CommonLibSSE)
-
 find_package(AutoTOML REQUIRED CONFIG)
 find_package(Boost
 	MODULE
@@ -45,6 +43,7 @@ find_package(Boost
 	COMPONENTS
 		regex
 )
+find_package(CommonLibSSE REQUIRED CONFIG)
 find_package(TBB
 	REQUIRED
 	CONFIG

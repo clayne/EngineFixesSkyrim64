@@ -5,6 +5,7 @@
     "autotoml",
     "boost-regex",
     "boost-stl-interfaces",
+    "commonlibsse",
     "spdlog",
     "tbb",
     "xbyak",
