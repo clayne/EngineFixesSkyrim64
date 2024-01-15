@@ -3,7 +3,7 @@ import os
 import zipfile
 
 def make_rel_archive(a_args):
-	archive = zipfile.ZipFile("(Part 1) Engine Fixes.zip".format(a_args.name), "w", zipfile.ZIP_DEFLATED)
+	archive = zipfile.ZipFile("Engine Fixes.zip".format(a_args.name), "w", zipfile.ZIP_DEFLATED)
 	def do_write(a_path):
 		archive.write(a_path, "SKSE/Plugins/{}".format(os.path.basename(a_path)))
 	def write_rootfile(a_extension):
