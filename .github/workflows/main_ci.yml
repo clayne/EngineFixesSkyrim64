@@ -72,4 +72,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: ${{ github.workspace }}/build/archive/*.zip
+          # https://github.com/softprops/action-gh-release/issues/280#issuecomment-1377056946
+          files: ./build/archive/*.zip
