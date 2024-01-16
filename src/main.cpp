@@ -58,8 +58,8 @@ extern "C" DLLEXPORT constinit auto SKSEPlugin_Version = []() {
     v.PluginName(Version::NAME);
     v.AuthorName("aers"sv);
     v.CompatibleVersions({ SKSE::RUNTIME_LATEST });
-    v.UsesAddressLibrary(true);
-    v.UsesStructsPost629(true);
+    v.UsesAddressLibrary();
+    v.UsesUpdatedStructs();
     return v;
 }();
 

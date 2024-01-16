@@ -1617,7 +1617,7 @@ namespace fixes
         static void LoadGame(RE::Sky* a_this, RE::BGSLoadGameBuffer* a_loadGameBuffer)
         {
             _LoadGame(a_this, a_loadGameBuffer);
-            a_this->flags |= 0x7E00;
+            a_this->flags = static_cast<RE::Sky::Flags>(a_this->flags.underlying() | 0x7E00);
         }
 
         static inline REL::Relocation<decltype(LoadGame)> _LoadGame;

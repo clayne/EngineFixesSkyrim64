@@ -32,9 +32,12 @@ endif()
 
 add_compile_definitions(
 	SKSE_SUPPORT_XBYAK
+    SKYRIM_SUPPORT_AE
     _UNICODE
     UNICODE
 )
+
+add_subdirectory(external/CommonLibSSE CommonLibSSE)
 
 find_package(AutoTOML REQUIRED CONFIG)
 find_package(Boost
@@ -43,7 +46,6 @@ find_package(Boost
 	COMPONENTS
 		regex
 )
-find_package(CommonLibSSE REQUIRED CONFIG)
 find_package(TBB
 	REQUIRED
 	CONFIG
