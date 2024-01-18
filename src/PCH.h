@@ -70,7 +70,6 @@
 #pragma warning(push)
 #include "AutoTOML.hpp"
 
-#include <boost/regex.hpp>
 #include <tbb/concurrent_hash_map.h>
 #include <tbb/scalable_allocator.h>
 #include <xbyak/xbyak.h>

@@ -40,8 +40,7 @@ bool CleanSKSECosaves()
     if (!savesPath)
         return false;
 
-    constexpr auto REGEX_CONSTANTS = boost::regex_constants::ECMAScript | boost::regex_constants::icase;
-    const boost::regex cosavePattern(R"(.*\.skse$)", REGEX_CONSTANTS);
+    std::regex cosavePattern(R"(.*\.skse$)", std::regex_constants::icase);
     std::vector<std::filesystem::path> matches;
     std::error_code ec;
 
@@ -50,7 +49,7 @@ bool CleanSKSECosaves()
         if (dirEntry.is_regular_file())
         {
             const auto& cosave = dirEntry.path();
-            if (boost::regex_match(cosave.filename().string(), cosavePattern))
+            if (std::regex_match(cosave.filename().string(), cosavePattern))
             {
                 auto save = cosave;
                 save.replace_extension(".ess"sv);

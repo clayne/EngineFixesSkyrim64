@@ -19,7 +19,6 @@ on:
   workflow_dispatch:
 
 env:
-  BOOST_MINOR: '74'
   BUILD_TYPE: Release
   VCPKG_DEFAULT_BINARY_CACHE: ${{ github.workspace }}/vcpkg-cache
 

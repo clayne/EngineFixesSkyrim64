@@ -42,14 +42,6 @@
     },
     {
       "cacheVariables": {
-        "Boost_USE_STATIC_LIBS": {
-          "type": "BOOL",
-          "value": "ON"
-        },
-        "Boost_USE_STATIC_RUNTIME": {
-          "type": "BOOL",
-          "value": "OFF"
-        },
         "CMAKE_MSVC_RUNTIME_LIBRARY": {
           "type": "STRING",
           "value": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"

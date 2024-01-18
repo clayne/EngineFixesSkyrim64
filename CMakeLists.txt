@@ -40,12 +40,6 @@ add_compile_definitions(
 add_subdirectory(external/CommonLibSSE CommonLibSSE)
 
 find_package(AutoTOML REQUIRED CONFIG)
-find_package(Boost
-	MODULE
-	REQUIRED
-	COMPONENTS
-		regex
-)
 find_package(TBB
 	REQUIRED
 	CONFIG
@@ -96,7 +90,6 @@ target_link_libraries(
 	${PROJECT_NAME}
 	PRIVATE
 		AutoTOML::AutoTOML
-		Boost::regex
 		CommonLibSSE::CommonLibSSE
 		TBB::tbb
 		TBB::tbbmalloc
